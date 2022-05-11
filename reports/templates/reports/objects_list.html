@@ -1,0 +1,23 @@
+{% load templatetags %}
+
+<h1>{{ report_name }}</h1>
+
+{% if object_list %}
+<table>
+{% for key, value in fields_list.items %}
+  <th>{{ value }}</th>
+{% endfor %}
+
+{% for object in object_list %}
+  <tr>
+    {% for key, value in fields_list.items %}
+      <td>{{ object|keyvalue:key }}</td>
+    {% endfor %}
+  </tr>  
+{% endfor %}
+</table>
+
+{% else %}
+    <h3>No journeys yet.</h3>
+{% endif %}
+

@@ -1,0 +1,20 @@
+{% block add_button_after_table %}
+  <a href="{% url 'journey_add' %}">Add new journey</a>
+{% endblock %}
+
+
+
+<h1>Journeys</h1>
+<table>
+{% for journey in object_list %}
+  <tr>
+    <td> <a href="{% url 'journey_update' journey.id %}" target="_blank">{{ journey.id }}</a> </td>
+    <td>{{ journey.vehicle }}</td>
+    <td>{{ journey.time }}</td>
+    <td>{{ journey.length }}</td>
+  </tr>  
+{% empty %}
+    <li>No journeys yet.</li>
+{% endfor %}
+</table>
+
