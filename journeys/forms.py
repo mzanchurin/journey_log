@@ -1,8 +1,6 @@
-from django.forms import ModelForm, TextInput
+from django.forms import ModelForm
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
-import datetime
-from django import forms
 
 from .models import Journey
 

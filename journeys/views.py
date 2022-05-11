@@ -1,12 +1,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import render
-from django.views.generic.base import ContextMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
-from django.utils.decorators import method_decorator
 from django.urls import reverse_lazy
-from django_datatables_view.base_datatable_view import BaseDatatableView
-from django.utils.html import escape
 
 from .models import Journey
 from .forms import JourneyForm

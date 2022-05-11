@@ -1,8 +1,7 @@
 from django.views.generic import TemplateView
-from django.views.generic.list import ListView
 from journeys.models import Journey
 from django.db.models import Sum, Func
-from django.db import migrations, models
+from django.db import models
 
 
 # class ReportView(ListView):
